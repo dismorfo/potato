@@ -1,0 +1,24 @@
+{
+  "name" : "Be Potato",
+  "version" : "1.0.0",
+  "description" : "Be Potato, enjoy your streaming services the way the should be",
+  "background" : {
+    "scripts": ["background.js"]
+  },
+  "content_scripts" : [
+    {
+      "matches" : [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js" : ["contentscript.js"],
+      "run_at" : "document_idle",
+      "all_frames" : false
+    }
+  ],
+  "icons" : {
+    "48" : "sandwich-48.png",
+    "128" : "sandwich-128.png"
+  },
+  "manifest_version": 2
+}
